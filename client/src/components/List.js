@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import DeleteBtn from './DeleteBtn';
 
-const List = () => {
-    const [list, setList] = useState([]); 
+const List = (props) => {
     return(
         <div>
             <ul>
-            {list.map((task, index) => {
+            {props.list.map((task, index) => {
                 return <li key={index}>{task} <input type="checkbox"/>
                 
                 </li>
